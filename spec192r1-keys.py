@@ -7,3 +7,7 @@ privKey = secrets.randbelow(curve.field.n)
 pubKey = privKey * curve.g
 print("private key:", privKey)
 print("public key:", pubKey)
+
+
+with open('public_key_lec.pem', 'wb') as f:
+    f.write(privKey)
